@@ -91,19 +91,15 @@ export function Main() {
 
   return (
     <div>
-      <div className="container mx-auto px-16 max-w-screen-lg w-full">
+      <div className="container mx-auto px-16 max-w-screen-md">
         <h1>Chart JS Hook</h1>
-        <div className="sm:h-[60vw] md:h-[40vh] h-[40vh]">
+        <div className="h-[30vh]">
           <h2> Bar Chart</h2>
           <canvas ref={canvasRef} />
           <br />
-        {/* </div> */}
-        {/* <div className="h-[40vh]"> */}
           <h2> Bar + Line Chart</h2>
           <canvas ref={canvasRef2} />
           <br />
-        {/* </div> */}
-        {/* <div className="h-[40vh]"> */}
           <h2> Pie Chart </h2>
           <canvas ref={canvasRef3} />
         </div>
