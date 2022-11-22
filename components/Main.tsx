@@ -45,6 +45,7 @@ export function Main() {
       datasets: []
     },
     options: {
+      maintainAspectRatio: false,
       animations: {
         tension: {
           duration: 1000,
@@ -67,8 +68,9 @@ export function Main() {
   useChart(canvasRef, {
     ...chartOptions, data: {
       ...chartOptions.data,
-      datasets: [{...barData} as any]
-    }});
+      datasets: [{ ...barData } as any]
+    }
+  });
   useChart(canvasRef2, {
     ...chartOptions, data: {
       ...chartOptions.data,
@@ -89,15 +91,19 @@ export function Main() {
 
   return (
     <div>
-      <div className="container mx-auto px-16 max-w-screen-md">
+      <div className="container mx-auto px-16 max-w-screen-lg w-full">
         <h1>Chart JS Hook</h1>
-        <div>
+        <div className="sm:h-[60vw] md:h-[40vh] h-[40vh]">
           <h2> Bar Chart</h2>
           <canvas ref={canvasRef} />
-          <br/>
+          <br />
+        {/* </div> */}
+        {/* <div className="h-[40vh]"> */}
           <h2> Bar + Line Chart</h2>
           <canvas ref={canvasRef2} />
-          <br/>
+          <br />
+        {/* </div> */}
+        {/* <div className="h-[40vh]"> */}
           <h2> Pie Chart </h2>
           <canvas ref={canvasRef3} />
         </div>
